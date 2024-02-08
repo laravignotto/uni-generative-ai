@@ -3,6 +3,7 @@
 % \usepackage[margin=2cm]{geometry}
 \usepackage[inner=3cm,outer=2cm,top=2cm,bottom=3cm]{geometry}
 \usepackage{fontspec}
+\usepackage[none]{hyphenat}
 \setmainfont{Comic Sans MS}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{graphicx}
@@ -10,10 +11,19 @@
 \usetikzlibrary{shapes.callouts,positioning}
 \usepackage[pages=some,placement=top]{background}
 
+\newcommand{\englang}[1]{
+    #1 %comment/uncomment this line to hide/show english
+}
+\newcommand{\italang}[1]{
+    % #1 %comment/uncomment this line to hide/show italian
+}
+
 % \renewcommand*\familydefault{\sfdefault}
 
 % \pagenumbering{gobble}
 \graphicspath{{./figures/}}
+
+
 
 \begin{document}
 
@@ -33,25 +43,179 @@ contents={\includegraphics[keepaspectratio]{cover}}
 
 
 
+%%%%%%%%%% PAGE 1
 \noindent
-\begin{minipage}{0.48\textwidth}
+\begin{minipage}{1.2\textwidth}
     \begin{tikzpicture}
-        \node (img) {\frame{\includegraphics[width=\textwidth]{1}}};
-        \node [ellipse callout, fill=white, draw, callout relative pointer={(.5,-.5)}] at (1,-1) {WOW!};
+        \node (img) {\frame{\includegraphics[width=\textwidth]{p1s1}}};
+        \node [text width=5cm, align=center, rectangle callout, fill=white, draw, callout relative pointer={(0,0)}] at (-8,10) {
+            \englang{SANCTUM PRIME: A HEAVEN BEYOND EARTH}
+            \italang{SANCTUM PRIME:\\UN PARADISO OLTRE LA TERRA}
+            };
+        \node [text width=7cm, align=center, rectangle callout, fill=white, draw, callout relative pointer={(0,0)}] at (3,6) {
+            \englang{AN ARCOLOGY, LIKE SANCTUM PRIME, STANDS AS A SELF-SUSTAINING OASIS BEYOND EARTH---A TOWERING CITYSCAPE WHERE HUMANITY THRIVES AMIDST THE EXPANSE OF DEEP SPACE, A TESTAMENT TO HUMAN RESILIENCE AND INNOVATION}
+            \italang{UN'ARCOLOGIA, COME SANCTUM PRIME, SI ERGE COME UN'OASI AUTOSUFFICIENTE AL DI LÀ DELLA TERRA---UN PAESAGGIO URBANO VERTIGINOSO DOVE L'UMANITÀ PROSPERA NELL'IMMENSITÀ DELLO SPAZIO PROFONDO, UNA TESTIMONIANZA DELLA RESILIENZA E DELL'INNOVAZIONE UMANA}
+            };
+        \node [text width=6.5cm, align=center, rectangle callout, fill=white, draw, callout relative pointer={(0,0)}] at (-6,-7) {
+            \englang{ARCOLOGIES ARE VERTICAL CITIES, WHERE PEOPLE LIVE, WORK, AND CREATE WITHIN TOWERING STRUCTURES, A MICROCOSM OF CIVILIZATION SUSTAINED BY ADVANCED TECHNOLOGY, PROVIDING SHELTER, RESOURCES, AND COMMUNITY IN THE VASTNESS OF SPACE}
+            \italang{LE ARCOLOGIE SONO CITTÀ VERTICALI, DOVE LE PERSONE VIVONO, LAVORANO, E CREANO ALL'INTERNO DI STRUTTURE IMPONENTI, UN MICROCOSMO DI CIVILTÀ SOSTENUTO DA TECNOLOGIE AVANZATE, CHE FORNISCONO RIPARO, RISORSE E COMUNITÀ NELLA VASTITÀ DELLO SPAZIO}
+            };
+    \end{tikzpicture}
+\end{minipage}%
+
+\newpage
+
+
+
+%%%%%%%%%% PAGE 2
+\noindent
+\begin{minipage}{0.49\textwidth}
+    \begin{tikzpicture}
+        \node (img) {\frame{\includegraphics[width=\textwidth]{p2s1}}};
+        \node [text width=5cm, align=center, rectangle callout, fill=white, draw, callout relative pointer={(0,0)}] at (-1,4) {
+            \englang{DR.~EVELYN HAYES, COMMUNICATION SCIENTIST}
+            \italang{DOTT.SSA EVELYN HAYES, SCIENZIATA DELLA COMUNICAZIONE}
+            };
+        \node [text width=2.5cm, align=center, ellipse callout, fill=white, draw, callout relative pointer={(1,1)}] at (-1.8,-2) {
+            \englang{THE SIGNAL PATTERNS ARE PERSISTENT, LILY}
+            \italang{I MODELLI DI SEGNALE SONO PERSISTENTI, LILY.}
+            };
+        \node [text width=2.5cm, align=center, ellipse callout, fill=white, draw, callout relative pointer={(-0.5,1)}] at (2,-3.6) {
+            \englang{WHAT DO YOU SEE UP THERE, LILY?}
+            \italang{COSA VEDI LASSU, LILY?}
+            };
     \end{tikzpicture}
 \end{minipage}%
 \hfill
-\begin{minipage}{0.48\textwidth}
+\begin{minipage}{0.49\textwidth}
     \begin{tikzpicture}
-        \node (img) {\frame{\includegraphics[width=\textwidth]{2}}};
-        \node [text width=3.5cm,align=center,ellipse callout, fill=white, draw, callout relative pointer={(-1,-1)}] at (0,1) {\footnotesize THIS IS SIMPLY AMAZING! I STILL CANNOT BELIEVE IT};
+        \node (img) {\frame{\includegraphics[width=\textwidth]{p2s2}}};
     \end{tikzpicture}
 \end{minipage}%
-\vfill
+\vspace{1.5cm}
 \noindent\hspace{1pt}
 \begin{minipage}{1\textwidth}
-    \frame{\includegraphics[width=\textwidth]{3}}
+    \begin{tikzpicture}
+        \node (img) {\frame{\includegraphics[width=\textwidth]{p2s3}}};
+        \node [dashed, text width=3cm, align=center, ellipse callout, fill=white, draw, callout relative pointer={(0,0)}] at (-3,4) {
+            \englang{THEY WANT US TO HEAR THEM.}
+            \italang{VOGLIONO CHE LI ASCOLTIAMO.}
+            };
+        \draw [dashed, fill=white, draw] (-2,3) ellipse (.5cm and .25cm);
+        \draw [dashed, fill=white, draw] (-1,2.5) ellipse (.25cm and .125cm);
+    \end{tikzpicture}
 \end{minipage}%
+
+\newpage
+
+
+
+%%%%%%%%%% PAGE 3
+\noindent
+\begin{minipage}{0.49\textwidth}
+    \begin{tikzpicture}
+        \node (img) {\frame{\includegraphics[width=\textwidth]{p3s1}}};
+        \node [text width=4.5cm, align=center, ellipse callout, fill=white, draw, callout relative pointer={(.5,1)}] at (-.5,-3.5) {
+            \englang{THE SIGNAL PATTERNS ARE PERSISTENT, BUT THEIR ORIGIN REMAINS ELUSIVE...}
+            \italang{GLI SCHEMI DEL SEGNALE SONO PERSISTENTI, MA LA LORO ORIGINE SEMBRA SFUGGENTE...}
+            };
+    \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.49\textwidth}
+    \begin{tikzpicture}
+        \node (img) {\frame{\includegraphics[width=\textwidth]{p3s2}}};
+        \node [text width=5cm, align=center, ellipse callout, fill=white, draw, callout relative pointer={(0,1.5)}] at (0,-3.5) {
+            \englang{OUR SITUATION IS CRITICAL. WE MUST FIND SOLUTIONS BEFORE IT'S TOO LATE!}
+            \italang{
+                LA NOSTRA SITUAZIONE È CRITICA. DOBBIAMO TROVARE DELLE SOLUZIONI PRIMA CHE SIA TROPPO TARDI!}
+            };
+        \node [text width=3.5cm, align=center, rectangle callout, fill=white, draw, callout relative pointer={(0,0)}] at (-1.5,4) {
+            \englang{IN THE MEETING ROOM}
+            \italang{NELLA SALA CONFERENZE}
+            };
+    \end{tikzpicture}
+\end{minipage}%
+\vspace{1.5cm}
+\noindent\hspace{1pt}
+\begin{minipage}{0.49\textwidth}
+    \begin{tikzpicture}
+        \node (img) {\frame{\includegraphics[width=\textwidth]{p3s3}}};
+        \node [text width=3.5cm, align=center, rectangle callout, fill=white, draw, callout relative pointer={(0,0)}] at (-1.5,4) {
+            \englang{BACK IN THE QUARTERS}
+            \italang{NEGLI ALLOGGI}
+            };
+        \node [dashed, text width=2.5cm, align=center, ellipse callout, fill=white, draw, callout relative pointer={(0,0)}] at (-1.8,-0.5) {
+            \englang{THEY'RE ASKING FOR HELP. I CAN FEEL IT.}
+            \italang{STANNO CHIEDENDO AIUTO. LO SENTO.}
+            };
+        \draw [dashed, fill=white, draw] (-1,1.3) ellipse (.5cm and .25cm);
+        \draw [dashed, fill=white, draw] (-0.5,1.8) ellipse (.25cm and .125cm);
+    \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.49\textwidth}
+    \begin{tikzpicture}
+        \node (img) {\frame{\includegraphics[width=\textwidth]{p3s4}}};
+        \node [text width=5cm, align=center, ellipse callout, fill=white, draw, callout relative pointer={(-0.5,1)}] at (1,-4) {
+            \englang{LILY, YOU SHOULDN'T BE SEEING THIS. IT'S NOT SAFE.}
+            \italang{LILY, NON DOVRESTI VEDERE TUTTO QUESTO. NON È SICURO.}
+            };
+    \end{tikzpicture}
+\end{minipage}%
+
+\newpage
+
+
+
+%%%%%%%%%% PAGE 4
+\noindent
+\begin{minipage}{0.49\textwidth}
+    \begin{tikzpicture}
+        \node (img) {\frame{\includegraphics[width=\textwidth]{p4s1}}};
+        \node [text width=3.5cm, align=center, rectangle callout, fill=white, draw, callout relative pointer={(0,0)}] at (-1.5,4) {
+            \englang{IN THE COMMUNICATION STATION}
+            \italang{NELLA STAZIONE DI COMUNICAZIONE}
+            };
+        \node [text width=4.5cm, align=center, ellipse callout, fill=white, draw, callout relative pointer={(0,-1)}] at (0.5,2) {
+            \englang{WHAT'S HAPPENING? THIS IS UNPRECEDENTED!}
+            \italang{COSA STA SUCCEDENDO? È SENZA PRECEDENTI!}
+            };
+    \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.49\textwidth}
+    \begin{tikzpicture}
+        \node (img) {\frame{\includegraphics[width=\textwidth]{p4s2}}};
+        \node [text width=4cm, align=center, ellipse callout, fill=white, draw, callout relative pointer={(0,1.5)}] at (0,-3.5) {
+            \englang{THIS SIGNAL---IT'S A CRY FOR HELP!}
+            \italang{QUESTO SEGNALE---È UN GRIDO D'AIUTO!}
+            };
+    \end{tikzpicture}
+\end{minipage}%
+\vspace{1.5cm}
+\noindent\hspace{1pt}
+\begin{minipage}{0.49\textwidth}
+    \begin{tikzpicture}
+        \node (img) {\frame{\includegraphics[width=\textwidth]{p4s3}}};
+        \node [text width=3cm, align=center, ellipse callout, fill=white, draw, callout relative pointer={(-0.5,0)}] at (2,-1) {
+            \englang{WE NEED TO ACT FAST! LIVES MAY BE AT STAKE!}
+            \italang{DOBBIAMO AGIRE VELOCEMENTE! DELLE VITE POTREBBERO ESSERE IN PERICOLO!}
+            };
+    \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.49\textwidth}
+    \begin{tikzpicture}
+        \node (img) {\frame{\includegraphics[width=\textwidth]{p4s4}}};
+        \node [text width=5cm, align=center, ellipse callout, fill=white, draw, callout relative pointer={(0,1)}] at (0,-3) {
+            \englang{PREPARE THE EXPEDITION. WE'RE GOING TO INVESTIGATE THE SOURCE OF THIS SIGNAL OURSELVES.}
+            \italang{PREPARATE L'ESPLORAZIONE. È ORA DI INDAGARE SULLA FONTE DI QUESTO SEGNALE.}
+            };
+    \end{tikzpicture}
+\end{minipage}%
+
+\newpage
 
 
 
