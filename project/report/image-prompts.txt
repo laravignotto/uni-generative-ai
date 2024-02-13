@@ -1,8 +1,8 @@
 PAGE 1
 
 p1s1
-A sprawling view of the arcology—a self-contained megastructure towering high into the artificial sky. The arcology, named "Sanctum Prime," is an architectural marvel of futuristic skyscrapers interconnected by sky bridges and walkways. The streets below bustle with life—hovering transport pods, bustling marketplaces, and people engaged in various activities. Arcologies are massive, often towering structures that can cover extensive areas vertically rather than sprawling horizontally. Picture skyscrapers interconnected with walkways, bridges, and various levels housing different functions. Comic book style.
-Negative prompt: black-and white, grayscale.
+Comic book style. Colored. A sprawling view of the arcology—a self-contained megastructure towering high into the artificial sky. The arcology, named "Sanctum Prime," is an architectural marvel of futuristic skyscrapers interconnected by sky bridges and walkways. The streets below bustle with life—hovering transport pods, bustling marketplaces, and people engaged in various activities. Arcologies are massive, often towering structures that can cover extensive areas vertically rather than sprawling horizontally. Picture skyscrapers interconnected with walkways, bridges, and various levels housing different functions. 
+Negative prompt: no black-and white, no grayscale, no speech bubbles.
 
 
 
@@ -10,15 +10,15 @@ PAGE 2
 
 p2s1
 A woman in her mid-thirties, with hazel eyes framed by thin-rimmed glasses, chestnut hair streaked with hints of silver, tied in a practical bun, with a focused expression, sits at a sleek workstation in an arcology, examining data on holographic screens. Comic book style. Colored. Full body picture.
-Negative prompt: black-and white, grayscale, speech bubbles.
+Negative prompt: no black-and white, no grayscale, no speech bubbles.
 
 p2s2
 Inside a futuristic workstation in an arcology, a girl of about 6 years old with a cherubic face framed by wisps of chestnut hair that cascade in loose curls around her shoulders, gazes up at the night sky through a small telescope. Comic book style. Colored.
-Negative prompt: black-and white, grayscale, speech bubbles.
+Negative prompt: no black-and white, no grayscale, no speech bubbles.
 
 p2s3
 Inside a futuristic workstation in an arcology, a close-up of the face of a girl of about 6 years old with a cherubic face framed by wisps of chestnut hair that cascade in loose curls around her shoulders, a small smile forming on her lips as she gazes into the starry expanse, an aura of inexplicable understanding surrounding her. Comic book style. Colored.
-Negative prompt: black-and white, grayscale, speech bubbles.
+Negative prompt: no black-and white, no grayscale, no speech bubbles.
 
 
 
@@ -26,7 +26,7 @@ PAGE 3
 
 p3s1
 A woman in her mid-thirties, with hazel eyes framed by thin-rimmed glasses, chestnut hair streaked with hints of silver, tied in a practical bun, is in her lab, surrounded by holographic screens displaying complex data. She gestures towards one of the screens, where a particularly intriguing pattern is displayed and her colleague stands beside her, also focused on the screens, with a look of concentration on their face. Comic book style. Colored.
-Negative prompt: black-and white, grayscale, speech bubbles.
+Negative prompt: no black-and white, no grayscale, no speech bubbles.
 
 p3s2
 A woman in her mid-thirties, with hazel eyes framed by thin-rimmed glasses, and chestnut hair streaked with hints of silver, tied in a practical bun, is shown in a meeting room within the arcology, surrounded by administrators and fellow scientists. They are gathered around a large conference table, where holographic projections display charts and graphs detailing the arcology's resource scarcity issues. The woman's expression is one of concern as she addresses the group. Comic book style. Colored.
@@ -73,7 +73,7 @@ In a futuristic arcology, a mother turns to her daughter with a concerned expres
 Negative prompt: no black-and white, no grayscale,  no speech bubbles.
 
 p5s3
-Full body portrait. A girl of about 6 years old with a cherubic face framed by wisps of chestnut hair that cascade in loose curls around her shoulders, has her eyes fixed on holographic screens showing a distress signal, with a sense of purpose and understanding. She's wearing a blue shirt that covers her entire body. Comic book style. Colored.
+Full body portrait. A girl of about 6 years old with a cherubic face framed by wisps of chestnut hair that cascade in loose curls around her shoulders, has her eyes fixed on holographic screens showing a distress signal, with a sense of purpose and understanding. She's wearing a white t-shirt and a brown unbottoned jacket. Comic book style. Colored.
 Negative prompt: no black-and white, no grayscale,  no speech bubbles.
 
 p5s4
