@@ -27,7 +27,7 @@
 % for ChatGPT
 \newenvironment{shadedquotation1}
     {\colorlet{shadecolor}{JungleGreen!15}\begin{shaded*}
-    \quoting[leftmargin=1cm, rightmargin=1cm, vskip=0pt]
+    \quoting[leftmargin=0cm, rightmargin=0cm, vskip=0pt]
     }
     {\endquoting
     \end{shaded*}
@@ -35,7 +35,7 @@
 % for Bard
 \newenvironment{shadedquotation2}
     {\colorlet{shadecolor}{Cerulean!15}\begin{shaded*}
-    \quoting[leftmargin=1cm, rightmargin=1cm, vskip=0pt]
+    \quoting[leftmargin=0cm, rightmargin=0cm, vskip=0pt]
     }
     {\endquoting
     \end{shaded*}
@@ -43,7 +43,7 @@
 % for Copilot
 \newenvironment{shadedquotation3}
     {\colorlet{shadecolor}{Purple!15}\begin{shaded*}
-    \quoting[leftmargin=1cm, rightmargin=1cm, vskip=0pt]
+    \quoting[leftmargin=0cm, rightmargin=0cm, vskip=0pt]
     }
     {\endquoting
     \end{shaded*}
@@ -109,10 +109,10 @@
 \section{Introduction}
 In this report, I will illustrate how I generated a short comic book story exploiting free online generative AI tools. The document is divided into the following sections:
 \begin{itemize}
-    \item Tools and Methods: I will describe the AI tools and methods I used to generate the story;
-    \item The Story -- Plot and Text: I will present the story, how I generated the text, and the limitations I encountered;
-    \item The Art -- Images: I will describe how I generated the illustrations and the limitations and biases of the AI tools I used;
-    \item Conclusions: I will draw some conclusions and discuss the results.
+    \item \textbf{Tools and Methods}: I will describe the AI tools and methods I used to generate the story;
+    \item \textbf{The Story -- Plot and Text}: I will present the story, how I generated the text, and the limitations I encountered;
+    \item \textbf{The Art -- Images}: I will describe how I generated the illustrations and the limitations and biases of the AI tools I used;
+    \item \textbf{Conclusions}: I will discuss the results and draw some conclusions.
 \end{itemize}
 At the end of this document, there are two appendices: the first one contains the original prompts I used to generate the story, and the second one contains the original prompts I used to generate the illustrations.
 
@@ -123,39 +123,43 @@ At the end of this document, there are two appendices: the first one contains th
 I used two generative AI tools to generate the story and the illustrations. For the story, I used ChatGPT 3.5 \cite{gpt}, a conversational AI model developed by OpenAI. For the illustrations, I used DALL-E 3 integrated into Microsoft Copilot \cite{copilot2023}, a generative model developed by OpenAI and Microsoft. 
 ChatGPT is an AI language model based on OpenAI's GPT (Generative Pre-trained Transformer) architecture. DALL-E 3 is also built upon OpenAI's GPT architecture, but it is specialized for image generation tasks. 
 
-I initially also tried to use other generative AI tools, such as Google Bard \cite{bard} and Microsoft Copilot to generate the story, and DreamStudio \cite{dreamstudio} to generate the illustrations. However, I found that ChatGPT and DALL-E 3 were the most effective tools for my purposes. I will talk about the limitations of these tools in the next sections.
+I initially also tried to use other generative AI tools, such as Google Bard \cite{bard} and Microsoft Copilot to generate the story, and DreamStudio \cite{dreamstudio} to generate the illustrations. However, I found that ChatGPT and DALL-E 3 were the most effective tools for my purposes. I will talk about the limitations of these tools in the following sections.
 
 I used GIMP, a free and open-source graphics editor, to resize and crop the images when needed. To paginate the comic book and add speech bubbles, I used \LaTeX, a typesetting system that is widely used for technical and scientific documents. I personally translated the text of the comic book from English to Italian, relying on Google Translate when needed, and compiled two versions of the comic book, one in English and one in Italian. 
 
-All the code I used to write this report and paginate story and the illustrations is available on my GitHub repository \cite{github}.
+All the code I used to write this report and paginate the story and the illustrations is available on my GitHub repository \cite{github}.
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%
 \section{The Story -- Plot and Text}
 
-The story is a science fiction tale set in a future where humanity lives in an arcology, a massive, self-sustaining structure that houses communities and ecosystems. The protagonist is Dr.~Evelyn Hayes, a communication scientist devoted to her work within the arcology. One day, she receives a mysterious message from an unknown source. Her young daughter seems to possess an intuition that the message is a cry for help from a distant planet. Dr.~Hayes decides to investigate the message and embarks on a journey to the planet. 
+The story is a science fiction tale set in a future where humanity lives in an arcology, a massive, self-sustaining structure that houses communities and ecosystems. The protagonist is Dr.~Evelyn Hayes, a communication scientist working within the arcology. One day, she receives a mysterious message from an unknown source. Her young daughter Lily seems to possess an intuition that the message is a cry for help from a distant planet. Dr.~Hayes decides to investigate the message and embarks on a journey to the planet. 
 
 The story is intended as a pilot episode, and could be expanded into a series. The title, \emph{Echoes of Hope -- A Journey Beyond The Stars}, was also generated by ChatGPT. The comic book is divided into 12 pages, each containing 1 to 5 panels.
 
 \subsection{Methodology} 
 I started by asking ChatGPT to generate a plot for a science fiction comic book. 
-\begin{shadedquotation1}
-    \noindent\textbf{Me:} Hi! I want to write a small story with an open ending (a pilot episode). The story is set inside the arcology humanity built as a last resort chance to perpetuate the human race. The main character could be a woman whose job is trying to communicate with long-distance computers or aliens, despite them being in deep space. Any suggestions?\bigskip
 
+\begin{shadedquotation1}
+    \noindent\textbf{Me:} Hi! I want to write a small story with an open ending (a pilot episode). The story is set inside the arcology humanity built as a last resort chance to perpetuate the human race. The main character could be a woman whose job is trying to communicate with long-distance computers or aliens, despite them being in deep space. Any suggestions?
+\end{shadedquotation1}
+
+\begin{shadedquotation1}
     \noindent\textbf{ChatGPT:} Hey there! That's an awesome premise for a story! So, your protagonist is a woman tasked with communicating across vast distances in deep space. Here are a few suggestions to kickstart your pilot episode:
     \begin{enumerate}
-        \item Establish the Arcology: Begin by describing the arcology itself. Paint a vivid picture of this massive structure where humanity has sought refuge.
-        \item Introduce the Protagonist: Show the daily life of your main character. What challenges does she face in her job? Is she dedicated, frustrated, or perhaps even a bit of both?
-        \item The Communication Task: Highlight her attempts to communicate with these distant entities—whether they're computers or potential aliens. You can build tension here, maybe by showing the difficulty and isolation of her work.
-        \item Personal Relationships: Explore her relationships within the arcology. Does she have friends, family, or colleagues? How do they support or hinder her mission?
-        \item Unanswered Questions: Leave some mysteries unanswered. This is crucial for an open ending! Maybe she receives a strange signal or encounters an anomaly she can't explain.
-        \item Cliffhanger or Open-Ended Conclusion: End the episode with a twist, a moment of uncertainty, or a question that keeps the audience guessing. It could be something that leaves the protagonist facing an unexpected situation or dilemma.
+        \item \textbf{Establish the Arcology}: Begin by describing the arcology itself. Paint a vivid picture of this massive structure where humanity has sought refuge.
+        \item \textbf{Introduce the Protagonist}: Show the daily life of your main character. What challenges does she face in her job? Is she dedicated, frustrated, or perhaps even a bit of both?
+        \item \textbf{The Communication Task}: Highlight her attempts to communicate with these distant entities—whether they're computers or potential aliens. You can build tension here, maybe by showing the difficulty and isolation of her work.
+        \item \textbf{Personal Relationships}: Explore her relationships within the arcology. Does she have friends, family, or colleagues? How do they support or hinder her mission?
+        \item \textbf{Unanswered Questions}: Leave some mysteries unanswered. This is crucial for an open ending! Maybe she receives a strange signal or encounters an anomaly she can't explain.
+        \item \textbf{Cliffhanger or Open-Ended Conclusion}: End the episode with a twist, a moment of uncertainty, or a question that keeps the audience guessing. It could be something that leaves the protagonist facing an unexpected situation or dilemma.
     \end{enumerate}
+
     Remember, with an open ending, it's about keeping the audience intrigued and curious about what might come next. Have fun creating your world and characters! If you need more specific help with character development or plot ideas, just let me know!
 \end{shadedquotation1}
 
-From there, I started to build the story and refining details by asking specific questions.  To keep the generative model on track, I used words and phrases such as ``remember'', ``please memorize'', ``keep in mind''. To check the coherence of the story, I asked from time to time ChatGPT to summarize the plot with sentences such as ``propose a possible plot for this story''. When I lacked ideas or was unsure on how to proceed, I explicitly asked for suggestions.
+From there, I started to build the story and refining details by asking specific questions.  To keep the generative model on track, I used words and phrases such as ``remember'', ``please memorize'', ``keep in mind''. To check the coherence of the story, I asked from time to time ChatGPT to summarize the plot with sentences such as ``can you provide an initial plot'', or ``please propose a possible plot for this story''. When I lacked ideas or was unsure on how to proceed, I explicitly asked for suggestions.
 
 Once I was satisfied with the plot, I asked ChatGPT to generate the text for each page of the comic book. 
 \begin{shadedquotation1}
@@ -167,12 +171,14 @@ This is the part that took the most time, as the output was too short and I had 
     \textbf{Me:} Can you expand on page 1? It needs to have between 3 and 6 panels (3 and 6 included, you randomly choose the number). Thoroughly describe each panel, since I will give the descriptions to an AI image generator model to get the desired picture. Include speech bubbles or narration boxes, when needed.
 \end{shadedquotation1}
 
-Notice that I asked ChatGPT to also describe the panels, as I planned to use the descriptions to later generate the illustrations. I also decided to separate a couple of pages into two, as the text was too long to fit into a single page, or the page would be too crowded.
+Notice that I asked ChatGPT to also describe the panels, as I planned to use the descriptions to later generate the illustrations. The only human intervention made here was to manually separate a couple of pages into two, as the text was too long to fit into a single page, or the page would be too crowded.
 
 Finally, I asked ChatGPT to generate a description of the cover for the comic book.
 \begin{shadedquotation1}
-    \textbf{Me:} Can you suggest to me a description of a possible cover for the comic book?\bigskip 
+    \textbf{Me:} Can you suggest to me a description of a possible cover for the comic book?
+\end{shadedquotation1}
 
+\begin{shadedquotation1}
     \noindent\textbf{ChatGPT:} Certainly! Here's a suggestion for the cover of the comic book:\medskip
 
     \noindent\textbf{Comic Book Cover:}\smallskip
@@ -190,10 +196,12 @@ The AI model also provided dialogues, specifying the character speaking them, wh
 
 The full text of the conversation is available in the Appendix.
 
-\subsection{Limitations} Before deciding to use ChatGPT to generate the story, I tried to use Google Bard and Microsoft Copilot. However, during the conversation I was not able to continue the story, as the AI models were not able to provide an answer.
+\subsection{Limitations} Before deciding to use ChatGPT to generate the story, I tried to use Google Bard and Microsoft Copilot. However, during the conversations I was not able to continue the story, as the AI models were not able to provide an answer.
 \begin{shadedquotation2}
-    \textbf{Me:} Thank you for your suggestions. I'd like the arcology to be a single, massive, self sustaining structure. The main character should be a scientist, and a very rational person. She could have a loving daughter, a child in the age range of 5-7, who is a deep and thoughtful person, very empathetic, and with an unusual insight, despite still being a young child. Let's tink about the other things later. Can you provide a quick summary of the beginning of the story with this information? It could start with a scene introducing the protagonist and her daughter while doing some mundane things. \bigskip
+    \textbf{Me:} Thank you for your suggestions. I'd like the arcology to be a single, massive, self sustaining structure. The main character should be a scientist, and a very rational person. She could have a loving daughter, a child in the age range of 5-7, who is a deep and thoughtful person, very empathetic, and with an unusual insight, despite still being a young child. Let's tink about the other things later. Can you provide a quick summary of the beginning of the story with this information? It could start with a scene introducing the protagonist and her daughter while doing some mundane things.
+\end{shadedquotation2}
 
+\begin{shadedquotation2}
     \noindent\textbf{Google Bard:} I'm just a language model, so I can't help you with that.
 \end{shadedquotation2}
 
@@ -210,7 +218,7 @@ This could be the result of some kind of bias in the training data, or a limitat
 As stated in the previous sections, I used DALL-E 3 integrated into Microsoft Copilot to generate the illustrations. I asked the AI to generate the images based on the descriptions of the panels I obtained from ChatGPT. I also asked the AI to generate the cover of the comic book based on the description I obtained from ChatGPT.
 
 \subsection{Methodology}
-To generate the pictures, I followed a general procedure. I copied the description of the panel from ChatGPT and pasted it into the chat with Copilot. Then, I modified the description to better suit my needs, and asked Copilot to generate the image.
+To generate the pictures, I followed a general procedure. I copied the description of the panel from ChatGPT and pasted it into the chat with Copilot. Then, I modified the description to be more understandable by the generative AI model and by adding some keywords and negative prompts, and asked Copilot to generate the image.
 
 Let us take a look at the illustration in Figure~\ref{fig:p2s1} as an example. The description of the panel given by ChatGPT is the following:
 \begin{shadedquotation1}
@@ -251,12 +259,12 @@ Before setting on using DALL-E 3 integrated into Microsoft Copilot, I tried to u
     \noindent Negative prompt: no black-and-white, no grayscale,  no speech bubbles.
 \end{shadedquotation3}
 
-With this prompt I obtained the image in Figure~\vref{fig:distinguish}. As we can see, the daughter's appearance seems to merge with the mother's:  they both wear glasses, and her hair is not curly, but it looks like it's a blend between curls and tied hair. 
+With this prompt I obtained images like the one in Figure~\vref{fig:distinguish}. As we can see, the daughter's appearance seems to merge with the mother's:  they both wear glasses, and her hair is not curly, but it looks like it's a blend between curls and tied hair. 
 
 \begin{figure}[htb]
     \centering
     \includegraphics[width=0.6\textwidth]{figures/no-distinguish-between-people.png}
-    \caption{Image generated using DreamStudio. I gave the description of two characters, but the AI model was not able to differentiate between them (e.g.~they have the same glasses).}
+    \caption{Image generated using DreamStudio. I gave the description of two characters, but the AI model was not able to differentiate between them (e.g.~they both have glasses).}
     \label{fig:distinguish}
 \end{figure}
 
