@@ -49,19 +49,6 @@
 
 \section{Introduction}
 
-% 1. Introduction
-% 2. Preliminaries
-%   2.1. Probabilistic Logic Programming 
-
-% \begin{itemize}
-%     \item Context
-%     \item Problem statement
-%     \begin{itemize}
-%         \item Definition
-%         \item Relevance
-%     \end{itemize}
-% \end{itemize}
-
 \frame{
     \frametitle{Introduction} 
     \begin{itemize}
@@ -109,7 +96,7 @@
     \frametitle{Probabilistic Logic Programming (3)}
     There are two interesting inference tasks on these probabilities: 
     \begin{itemize}
-        \item \textbf{Success probability}: The probability that a query atom or formula is true, calculated as the sum of the probabilities of all worlds where the query is true.
+        \item \textbf{Success probability}: The probability that a query atom or formula is true.%, calculated as the sum of the probabilities of all worlds where the query is true.
         $$
             P(y ; p)=\sum_{F \subseteq \mathcal{F}: w_{F} \models y} P\left(w_{F} ; p\right)
         $$
@@ -132,11 +119,9 @@
     \begin{figure}[htb]
         \centering
         \includegraphics[width=0.95\textwidth]{figures/comparison.png}
-        % \caption{}
-        \label{fig:comparison}
     \end{figure}
     \begin{itemize}
-        \item Model (M1+M2) learns a latent representation that is closely tied to the label, making the image generation dependent on the training task.
+        \item Model M1+M2 learns a latent representation that is closely tied to the label, making the image generation dependent on the training task.
         \item The CCVAE model learns two independent latent vectors, one symbolic ($z_{\text {sym}}$) and one subsymbolic ($z$), with $z_{\text {sym}}$ directly corresponding to the label elements.
     \end{itemize}
 }
@@ -147,8 +132,6 @@
     \begin{figure}[htb]
         \centering
         \includegraphics[width=0.95\textwidth]{figures/comparison.png}
-        % \caption{}
-        \label{fig:comparison}
     \end{figure}
     \begin{itemize}
         \item These methods are limited because they encode the training task into the latent representation, which is not ideal when the label is only weakly related to the image’s symbolic structure.
@@ -159,21 +142,6 @@
 
 
 \section{Proposed Solution}
-
-% 3. The VAEL Model
-% Generative model
-% Inference model
-
-% \begin{itemize}
-%     \item Model
-%     \item Cost
-%     \begin{itemize}
-%         \item Required data
-%         \item Required hardware
-%         \item Complexity
-%         \item \dots
-%     \end{itemize}
-% \end{itemize}
 
 \frame{
     \subsection{The VAEL Model}
@@ -267,16 +235,7 @@
 
 
 
-
 \section{Model Validation}
-
-% Objective function
-% 4. Experiments
-
-% \begin{itemize}
-%     \item Mathematical proof
-%     \item Experimental evaluation
-% \end{itemize}
 
 \frame{
     \frametitle{Objective Function}
@@ -375,8 +334,6 @@
     \begin{figure}[htb]
         \centering
         \includegraphics[width=0.8\textwidth]{figures/pgms.png}
-        % \caption{}
-        \label{fig:pgms}
     \end{figure}
 \end{frame}
 
@@ -442,16 +399,8 @@
     \frametitle{Training (4)}
     \begin{figure}[htb]
         \centering
-        \includegraphics[width=0.75\textwidth]{figures/algorithm.png}
-        % \caption{}
-        \label{fig:algo}
+        \includegraphics[width=0.8\textwidth]{figures/algorithm.png}
     \end{figure}
-    {\footnotesize
-    $$
-        P\left(w_{F} ; p\right)=\prod_{f_{i} \in F} p_{i} \prod_{f_{i} \in \mathcal{F} \backslash F}\left(1-p_{i}\right) \qquad\qquad
-        P(y ; p)=\sum_{F \subseteq \mathcal{F}: w_{F} \models y} P\left(w_{F} ; p\right)
-    $$
-    }
 \end{frame}
 
 
@@ -474,7 +423,6 @@
     \begin{itemize}
         \item \textbf{Goal}: Predict the correct label from the input image, evaluated by predictive accuracy (mCLASS).
         \item \textbf{Method}: VAEL uses ProbLog inference, while CCVAE uses a neural network to parameterize ( $p(y|z_{\text{sym}})$ ).
-        % \item Results: VAEL and CCVAE perform similarly on the Mario dataset but VAEL excels on the 2digit MNIST dataset due to its better handling of combinatorial nature tasks.
     \end{itemize}
     \begin{figure}[htb]
         \centering
@@ -488,7 +436,6 @@
     \begin{itemize}
         \item \textbf{Goal}: Assess model performance in generating both the image and its label.
         \item \textbf{Method}: VAEL generates from a sampled latent vector ($\mathbf{z} \sim \mathcal{N}(0, 1)$), while CCVAE samples a label first, then the latent vector, and finally the image.
-        % \item Results: VAEL produces well-defined digits for the 2digit MNIST dataset and data-like images for the Mario dataset. CCVAE struggles with ambiguous digit generation and fails to draw the agent in the Mario dataset.
     \end{itemize}
     \begin{figure}[htb]
         \centering
@@ -508,7 +455,6 @@
     \begin{itemize}
         \item \textbf{Goal}: Evaluate the model's ability to generate images conditionally based on evidence.
         \item \textbf{Method}: VAEL consistently generates coherent pairs of digits and states, while CCVAE often fails to meet the evidence criteria.
-        % \item Results: VAEL shows versatility and accuracy in generating images that align with the given evidence, outperforming CCVAE, which exhibits limitations in task complexity.
     \end{itemize}
     \begin{figure}[htb]
         \centering
@@ -528,7 +474,6 @@
     \begin{itemize}
         \item \textbf{Goal}: Test VAEL’s ability to generalize to new tasks without retraining.
         \item \textbf{Approach}: For the 2digit MNIST dataset, tasks like multiplication, subtraction, and exponentiation were introduced. For the Mario dataset, two shortest path tasks were defined.
-        % \item Results: VAEL successfully generalized to these new tasks by simply changing the ProbLog program, demonstrating its flexibility and robustness.
     \end{itemize}
     \begin{figure}[htb]
         \centering
@@ -543,17 +488,6 @@
 \end{frame}
 
 
-
-
-% 5. Related Work
-    
-% \begin{itemize}
-%     \item Differences with the literature
-%     \item Strengths
-%     \item Weaknesses
-% \end{itemize}
-
-
 \section{Critical Analysis}
 
 \frame{
@@ -562,7 +496,6 @@
     \begin{itemize}
         \item Generative models are categorized into those based on \textbf{text descriptions} and those using \textbf{scene graphs}.
         \item \textbf{Text-based models} focus on controlling \emph{object properties} (shape, color, texture), \emph{spatial relations} (positioning of objects relative to each other), or \emph{both properties and relations}.
-        % \item This paper's framework relates to these models by addressing image generation in a relational context.
         \item Unlike previous works, VAEL framework employs probabilistic logic programming to encode and reason with first-order logical knowledge.
         \item This method allows for generalization to both compositions of known relations and entirely new relations.
         \item \textbf{Scene graph-based models} explicitly encode object relations but are less expressive than the logical programs used in this framework, which enable more general reasoning capabilities.
@@ -581,7 +514,6 @@
     \textbf{Current Methods} use scene-mixtures, spatial attention models, and combinations for \emph{object-oriented decomposition}, and employ encoders and decoders for \emph{part-oriented decomposition}. Recent efforts aim to achieve \emph{hierarchical decomposition}, learning both objects and parts.\smallskip 
 
     \textbf{This paper's approach} focuses on static images, not using temporal information. Does not rely on predefined information about object locations. Utilizes a simple autoencoder architecture to discover objects based on logical relations. 
-    % Presents a different direction that could benefit from advancements in unsupervised scene decomposition in future work. 
 }
 
 
@@ -593,23 +525,6 @@
         \item VAEL model uses a \textbf{logical reasoning framework} to handle a wider range of generative tasks and knowledge manipulation.
         \item Attempts to integrate generative models with probabilistic programming have been made, but they often had limited reasoning capabilities.
         \item This paper's approach provides a \textbf{unified model} that can generate images and perform logical reasoning simultaneously.
-        % \item The work cited as [60] was an early attempt to combine generative models with logic, but it had limitations in application and integration.
-        % The authors of the paper have developed a probabilistic graphical model that integrates the symbolic and perceptual aspects more effectively.
-        \item The authors are the first to conduct experiments showing the \textbf{benefits of this integration} in terms of task generalization and data efficiency.
-    \end{itemize}
-}
-
-
-\frame{
-    \frametitle{Neuro-Symbolic Generation} 
-    \begin{itemize}
-        \item Neuro-symbolic generation is a new field combining machine learning with logical reasoning.
-        \item Previous models had a two-layered latent representation for scenes and objects but were limited to specific spatial relations.
-        \item VAEL model uses a \textbf{logical reasoning framework} to handle a wider range of generative tasks and knowledge manipulation.
-        \item Attempts to integrate generative models with probabilistic programming have been made, but they often had limited reasoning capabilities.
-        \item This paper's approach provides a \textbf{unified model} that can generate images and perform logical reasoning simultaneously.
-        % \item The work cited as [60] was an early attempt to combine generative models with logic, but it had limitations in application and integration.
-        % The authors of the paper have developed a probabilistic graphical model that integrates the symbolic and perceptual aspects more effectively.
         \item The authors are the first to conduct experiments showing the \textbf{benefits of this integration} in terms of task generalization and data efficiency.
     \end{itemize}
 }
@@ -630,7 +545,6 @@
 
 
 \frame{
-    % \frametitle{Conclusions}
     \begin{center}
         \Huge \textbf{Thank you!}
     \end{center} 
