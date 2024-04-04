@@ -1,4 +1,5 @@
-# Generative AI
+# Generative AI ![](https://img.icons8.com/?size=48&id=PxQoyT1s0uFh&format=png) ![](https://img.icons8.com/?size=48&id=EzmQwT9W9uy4&format=png)
+---
 
 ### Project for the Generative AI course at UNIUD
 
